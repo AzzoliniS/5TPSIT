@@ -16,7 +16,7 @@ Se il container è già stato creato ed è fermo, lo si può avviare con il coma
 
 > `docker-compose start`
 
-> [!INFO]
+> [!NOTE]
 >Per una comoda gestione dei container docker è consigliabile installare l'estensione **Docker** in Visual Studio Code.
 
 ## Procedura di installazione
