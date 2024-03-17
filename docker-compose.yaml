@@ -1,0 +1,25 @@
+# Versione di docker-compose utilizzata
+version: "3"
+
+# services: mi consente di creare una serie di container e di mandarli in esecuzione
+services:
+  # mysql-server: viene creato un servizio (il nome del servizio è mysql-server)
+  mysql-server:
+    # Per creare il container viene utilizzata l'ultima versione di un'immagine chiamata mysql
+    # Le immagini si trovano su repository accessibili in internet senza la necessità di specificarne l'indirizzo
+    image: mysql:latest
+    # Nome assegnato al container: importante se sono presenti diversi container che devono comunicare fra loro
+    container_name: mysql-server
+    #  Mysql può essere configurato attraverso variabili di ambiente
+    environment:
+      # Database creato dopo la creazione del container
+      MYSQL_DATABASE: dbapp
+      # Password impostata per l'utente root: obbligatoria in mysql
+      MYSQL_ROOT_PASSWORD: root
+    # Il server my sql sarà accessibili su localhost alla porta 3306
+    ports:          
+      - 3306:3306
+    # Mysql utilizzerà i file contenuti nella directory mysql per inizializzare il database.
+    # Possono essere presenti più file: in questo caso verranno eseguiti in ordine alfabetico
+    volumes:
+      - ./mysql:/docker-entrypoint-initdb.d
