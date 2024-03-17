@@ -9,16 +9,14 @@ Per creare il container e mandarlo in esecuzione eseguire il comando:
 
 >`docker-compose up -d`. 
 
->[IMPORTANT!]
->
+> [!IMPORTANT]
 >Durante la creazione del container (ovvero l'installazione di mysql), verrà anche creato il database definiti attraverso gli script presenti nella directory mysql
 
 Se il container è già stato creato ed è fermo, lo si può avviare con il comando:
 
 > `docker-compose start`
 
->[!INFO]
->
+> [!INFO]
 >Per una comoda gestione dei container docker è consigliabile installare l'estensione **Docker** in Visual Studio Code.
 
 ## Procedura di installazione
