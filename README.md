@@ -22,11 +22,13 @@ Se il container è già stato creato ed è fermo, lo si può avviare con il coma
 >Per una comoda gestione dei container docker è consigliabile installare l'estensione **Docker** in Visual Studio Code.
 
 ## Procedura di installazione
-1. dopo aver clonato il progetto, mandare in esecuzione il server mysql con l'istruzione riportata sopra: `docker-compose up -d`
-2. entrare nella cartella wsserver da terminale: `cd wsserver`
-3. installare le librerie utilizzate dal progetto node: `npm install`
-4. installare in modo globale **nodemon** (applicativo da utilizzare per mandare in esecuzione il server node in fase di svilippo: ad ogni cambiamento dei file presenti nella cartella il server viene riavviato): `npm install -g nodemon`
-5. avviare il server: `nodemon app.js`
+1. Clonare il progetto nel proprio codespace o in una cartella del proprio PC: se si decide di sviluppare il progetto in locale, assicurarsi di aver installato **Nodejs** e **Docker desktop**:  
+`git clone https://github.com/andreatrentini/esempio-restfull-node-mysql.git`
+2. dopo aver clonato il progetto, mandare in esecuzione il server mysql con l'istruzione riportata sopra: `docker-compose up -d`
+3. entrare nella cartella wsserver da terminale: `cd wsserver`
+4. installare le librerie utilizzate dal progetto node: `npm install`
+5. installare in modo globale **nodemon** (applicativo da utilizzare per mandare in esecuzione il server node in fase di svilippo: ad ogni cambiamento dei file presenti nella cartella il server viene riavviato): `npm install -g nodemon`
+6. avviare il server: `nodemon app.js`
 
 ## Test del webservice
 Per testare il server, è possibile installare in **Visual Studio Code** l'estensione chiamata **REST Client**, e inviare le richieste http presenti nel file **http-request.http**.
